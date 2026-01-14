@@ -31,4 +31,15 @@ function playRound(humanChoice, computerChoice){
     }
 }
 
-playRound(getHumanChoice(),getComputerChoice());
+
+function playGame(){
+
+    for(let i = 1; i <= 5; i++){
+        playRound(getHumanChoice(), getComputerChoice());
+    }
+
+    const result = humanScore > computerScore ? "Congratulations You Won!!! :>" : "You Lost :< ";  
+    console.log(result);
+}
+
+playGame();
